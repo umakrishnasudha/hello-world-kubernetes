@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: umakrishnasudhahelloworldkubernetes 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: umakrishnasudhahelloworldkubernetes
+  template:
+    metadata:
+      labels:
+        app: umakrishnasudhahelloworldkubernetes 
+    spec:
+      containers:
+        - name: umakrishnasudhahelloworldkubernetes 
+          image: wagpocacr.azurecr.io/umakrishnasudhahelloworldkubernetes
+          ports:
+          - containerPort: 80
